@@ -298,5 +298,37 @@
 <button aria-label="Volver arriba" class="back-to-top" id="backToTop">
         ↑
     </button>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (window.innerWidth <= 768) {
+
+        const elementos = document.querySelectorAll(
+            ".reveal, .section, .service-card, " +
+            ".extra-card, .extra-info, .services-note"
+        );
+
+        elementos.forEach(function(elemento) {
+
+            elemento.style.setProperty(
+                "opacity", "1", "important"
+            );
+
+            elemento.style.setProperty(
+                "visibility", "visible", "important"
+            );
+
+            elemento.style.setProperty(
+                "transform", "none", "important"
+            );
+
+            elemento.classList.add("is-visible");
+
+        });
+    }
+});
+</script>
+
 </body>
 </html>
