@@ -823,3 +823,57 @@
 @keyframes extraFade {from {opacity:0;transform:translateY(22px)}to {opacity:1;transform:translateY(0)}}
 @media(max-width:720px){.extra-grid{grid-template-columns:1fr}.extra-info{padding-top:50px;padding-bottom:50px}.extra-card{padding:24px}.vertical-video-wrap{max-width:310px}}
 @media(prefers-reduced-motion:reduce){.extra-card{animation:none;transition:none}}
+
+
+/* CORRECCIÓN RESPONSIVE - SERVICIOS */
+
+/* Evita que las secciones queden invisibles */
+.section.reveal,
+.services-note.reveal,
+.extra-info.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* Ajustes para celulares */
+@media screen and (max-width: 760px) {
+
+    /* Mostrar el contenido de Servicios */
+    .service-card.reveal,
+    .profile-card.reveal,
+    .wellbeing-card.reveal,
+    .approach-step.reveal,
+    .ruth-card.reveal,
+    .ruth-info-step.reveal,
+    .ruth-hobby.reveal,
+    .cv-panel.reveal,
+    .contact-page-grid.reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    /* Adaptar tarjetas al ancho del celular */
+    .extra-info .extra-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+    }
+
+    .extra-info .extra-card {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    /* Video vertical */
+    .vertical-service-video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 16;
+        object-fit: contain;
+    }
+}
+
