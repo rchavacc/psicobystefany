@@ -877,3 +877,46 @@
     }
 }
 
+/* CORRECCIÓN DE VISIBILIDAD EN SERVICIOS */
+
+@media screen and (max-width: 768px) {
+
+    body .section,
+    body .section.reveal,
+    body .services-note,
+    body .services-note.reveal,
+    body .extra-info,
+    body .extra-info.reveal,
+    body .service-card,
+    body .service-card.reveal,
+    body .extra-card,
+    body .extra-grid,
+    body .section-heading {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .extra-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .extra-card {
+        display: block !important;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .vertical-service-video {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 9 / 16;
+        object-fit: contain;
+    }
+}
+
