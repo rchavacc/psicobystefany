@@ -1,588 +1,1025 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Conoce a Ruth Chavac, estudiante de Psicología Clínica, su formación académica, experiencia laboral, intereses y compromiso con el bienestar." name="description"/>
-<meta content="#68478c" name="theme-color"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conoce a Ruth Chavac, psicóloga clínica, su formación académica, experiencia profesional y pasatiempos.">
+<meta name="theme-color" content="#68478c">
 <title>Sobre mí | Ruth Chavac</title>
-<!-- Fuentes -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Estilos y JavaScript existentes -->
-<link href="styles.css" rel="stylesheet"/>
-<script defer="" src="script.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<script defer src="script.js"></script>
+
+<style>
+/* =========================================
+   NUEVA INFOGRAFÍA DE PASATIEMPOS
+   ========================================= */
+
+.ruth-happiness {
+  padding: 90px 20px;
+  background: linear-gradient(
+    145deg,
+    #fffaf7 0%,
+    #fdf6fa 48%,
+    #f6effb 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.ruth-happiness *,
+.ruth-happiness *::before,
+.ruth-happiness *::after {
+  box-sizing: border-box;
+}
+
+.ruth-happiness-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ruth-happiness::before,
+.ruth-happiness::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: .4;
+  pointer-events: none;
+}
+
+.ruth-happiness::before {
+  background: #efd2e4;
+  top: -150px;
+  left: -120px;
+}
+
+.ruth-happiness::after {
+  background: #d9c6f2;
+  right: -120px;
+  bottom: -140px;
+}
+
+/* ENCABEZADO */
+
+.happiness-header {
+  text-align: center;
+  max-width: 790px;
+  margin: 0 auto 55px;
+}
+
+.happiness-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #9673a6;
+  margin-bottom: 18px;
+}
+
+.happiness-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(35px, 5vw, 61px);
+  color: #30253c;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.happiness-header h2 em {
+  color: #a478ad;
+}
+
+.happiness-header p {
+  font-size: 17px;
+  color: #62586b;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.happiness-decoration {
+  font-size: 33px;
+  color: #b78ebc;
+  margin-top: 15px;
+}
+
+/* GRID */
+
+.happiness-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.happiness-card {
+  grid-column: span 2;
+  border-radius: 30px;
+  padding: 16px;
+  min-width: 0;
+  box-shadow: 0 12px 35px rgba(81, 51, 95, .07);
+  transition: transform .4s ease, box-shadow .4s ease;
+  animation: happinessFade .8s ease both;
+}
+
+.happiness-card:nth-child(1),
+.happiness-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+.happiness-card:nth-child(2) {
+  animation-delay: .1s;
+}
+
+.happiness-card:nth-child(3) {
+  animation-delay: .2s;
+}
+
+.happiness-card:nth-child(4) {
+  animation-delay: .3s;
+}
+
+.happiness-card:nth-child(5) {
+  animation-delay: .4s;
+}
+
+.happiness-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 22px 48px rgba(81, 51, 95, .14);
+}
+
+.happiness-green {
+  background: #e8f2e1;
+  --hobby-accent: #6d9968;
+}
+
+.happiness-purple {
+  background: #f1e5f5;
+  --hobby-accent: #8b6aaa;
+}
+
+.happiness-peach {
+  background: #fbe5d9;
+  --hobby-accent: #ce8067;
+}
+
+.happiness-blue {
+  background: #e2f0f8;
+  --hobby-accent: #6595b7;
+}
+
+.happiness-lilac {
+  background: #eee5f6;
+  --hobby-accent: #8a6bac;
+}
+
+/* FOTOGRAFÍAS */
+
+.happiness-image {
+  width: 100%;
+  height: 225px;
+  border-radius: 23px 23px 65px 23px;
+  overflow: hidden;
+  background: rgba(255,255,255,.5);
+  position: relative;
+}
+
+.happiness-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease;
+}
+
+.happiness-card:hover .happiness-image img {
+  transform: scale(1.08);
+}
+
+/* CONTENIDO */
+
+.happiness-content {
+  padding: 20px 10px 9px;
+}
+
+.happiness-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background: rgba(255,255,255,.75);
+  border-radius: 50%;
+  font-size: 26px;
+  margin-bottom: 13px;
+}
+
+.happiness-content h3 {
+  font-family: "Playfair Display", serif;
+  color: #35283e;
+  font-size: 25px;
+  line-height: 1.3;
+  margin: 0 0 14px;
+}
+
+.happiness-content > p {
+  color: #514a58;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 20px;
+}
+
+/* BENEFICIOS */
+
+.happiness-benefits {
+  padding: 17px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.5);
+}
+
+.happiness-benefits strong {
+  display: inline-block;
+  padding: 8px 15px;
+  background: var(--hobby-accent);
+  color: white;
+  border-radius: 25px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.happiness-benefits ul {
+  padding-left: 19px;
+  margin: 0;
+}
+
+.happiness-benefits li {
+  font-size: 13px;
+  color: #4e4556;
+  line-height: 1.85;
+}
+
+/* FRASE FINAL */
+
+.happiness-footer {
+  text-align: center;
+  margin-top: 65px;
+}
+
+.happiness-footer .heart {
+  display: block;
+  color: #ae83b4;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.happiness-footer p {
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-style: italic;
+  color: #45354e;
+  margin: 0 0 12px;
+}
+
+.happiness-footer small {
+  color: #987e9d;
+  letter-spacing: 2px;
+}
+
+/* ANIMACIÓN */
+
+@keyframes happinessFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+  .happiness-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .happiness-card,
+  .happiness-card:nth-child(1),
+  .happiness-card:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .happiness-image {
+    height: 200px;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+  .ruth-happiness {
+    padding: 60px 15px;
+  }
+
+  .happiness-header {
+    margin-bottom: 38px;
+  }
+
+  .happiness-header p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .happiness-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .happiness-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 23px;
+  }
+
+  .happiness-card,
+  .happiness-card:nth-child(1),
+  .happiness-card:nth-child(2) {
+    grid-column: 1;
+    width: 100%;
+  }
+
+  .happiness-image {
+    height: 220px;
+  }
+
+  .happiness-content h3 {
+    font-size: 24px;
+  }
+
+  .happiness-footer {
+    margin-top: 45px;
+  }
+
+  .happiness-footer p {
+    font-size: 24px;
+  }
+
+  .happiness-footer small {
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .happiness-card {
+    animation: none;
+  }
+
+  .happiness-card,
+  .happiness-image img {
+    transition: none;
+  }
+}
+</style>
 </head>
+
 <body>
-<!-- Barra superior -->
+
+<!-- BARRA SUPERIOR -->
 <div class="topbar">
-<div class="container topbar-inner">
-<span>Un espacio para ti, tu bienestar y tu crecimiento</span>
-<a href="contacto.html">
-                Solicitar información
-                <span aria-hidden="true">↗</span>
-</a>
+  <div class="container topbar-inner">
+    <span>Un espacio para ti, tu bienestar y tu crecimiento</span>
+    <a href="contacto.html">
+      Solicitar información
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
 </div>
-</div>
-<!-- Encabezado y navegación -->
+
+<!-- NAVEGACIÓN -->
 <header class="header">
-<div class="container nav-wrap">
-<a aria-label="Ruth Chavac, inicio" class="brand" href="index.html">
-<img alt="Logotipo de Ruth Chavac" src="logo-ruth-chavac.jpg"/>
-<span>
-<strong>Ruth Chavac</strong>
-<small>PSICOLOGÍA Y BIENESTAR</small>
-</span>
-</a>
-<button aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú" class="menu-toggle" id="menuToggle">
-                ☰
-            </button>
-<nav class="nav" id="mainNav">
-<a href="index.html">Inicio</a>
-<a aria-current="page" class="active" href="sobre-mi.html">
-                    Sobre mí
-                </a>
-<a href="servicios.html">Mis servicios</a>
-<a href="agendar.html">Agendar cita</a>
-<a href="ubicacion.html">Ubicación</a>
-<a href="contacto.html">Contacto</a>
-<a class="btn btn-small" href="agendar.html">
-                    Solicitar cita <span>↗</span>
-</a>
-</nav>
-</div>
+  <div class="container nav-wrap">
+
+    <a class="brand" href="index.html" aria-label="Ruth Chavac, inicio">
+      <img src="logo-ruth-chavac.jpg" alt="Logotipo de Ruth Chavac">
+      <span>
+        <strong>Ruth Chavac</strong>
+        <small>PSICOLOGÍA Y BIENESTAR</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <nav class="nav" id="mainNav">
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html" class="active" aria-current="page">Sobre mí</a>
+      <a href="servicios.html">Mis servicios</a>
+      <a href="agendar.html">Agendar cita</a>
+      <a href="ubicacion.html">Ubicación</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="agendar.html" class="btn btn-small">
+        Solicitar cita <span>↗</span>
+      </a>
+    </nav>
+
+  </div>
 </header>
+
 <main>
+
 <!-- PRESENTACIÓN -->
 <section class="ruth-hero">
-<div class="ruth-container">
-<p class="ruth-eyebrow">Conóceme</p>
-<h1>
-                    Un acompañamiento desde la
-                    <em>escucha y el respeto.</em>
-</h1>
-<p>
-                    Conoce más sobre mí, mi formación académica,
-                    mi experiencia laboral y las cosas que forman
-                    parte de mi vida.
-                </p>
-</div>
+  <div class="ruth-container">
+    <p class="ruth-eyebrow">Conóceme</p>
+    <h1>
+      Un acompañamiento desde la
+      <em>escucha y el respeto.</em>
+    </h1>
+    <p>
+      Conoce más sobre mí, mi formación académica,
+      mi experiencia laboral y las cosas que forman
+      parte de mi vida.
+    </p>
+  </div>
 </section>
-<!-- SOBRE MÍ Y FOTOGRAFÍA -->
+
+<!-- SOBRE MÍ -->
 <section class="ruth-section">
-<div class="ruth-container ruth-about-grid">
-<!--
-                    FOTOGRAFÍA PERSONAL
+  <div class="ruth-container ruth-about-grid">
 
-                    Guarda tu fotografía en esta misma carpeta
-                    con el nombre: foto-ruth.jpg
+    <div>
+      <div class="ruth-photo-frame">
+        <img
+          src="ruthcv.png"
+          alt="Fotografía personal de Ruth Chavac"
+          class="ruth-photo"
+          loading="lazy">
+      </div>
 
-                    Si tu imagen tiene otro nombre, modifica
-                    el atributo src de la etiqueta img.
-                -->
-<div>
-<div class="ruth-photo-frame">
-<img alt="Fotografía personal de Ruth Chavac" class="ruth-photo" loading="lazy" src="ruthcv.png"/>
-</div>
-<p class="ruth-photo-caption">
-                        Cada día es una oportunidad para aprender
-                        y crecer.
-                    </p>
-</div>
-<!-- Biografía -->
-<div class="ruth-bio">
-<p class="ruth-eyebrow">Sobre mí</p>
-<h2>
-                        Soy Ruth Chavac.
-                        <br/>
-<em>Estoy aquí para escucharte.</em>
-</h2>
-<p>
-                        Tengo 20 años y soy una Psicologa especializada en el aréa Clínica, apasionada
-                        por la salud mental y el aprendizaje continuo.
-                        Me caracteriza una actitud proactiva, orientada
-                        a la adquisición constante de conocimientos y al
-                        fortalecimiento de mis habilidades clínicas y
-                        profesionales. Destaco por mi comunicación
-                        empática y efectiva, mi capacidad para trabajar
-                        en equipo y mi compromiso con la responsabilidad
-                        y el crecimiento profesional.
-                    </p>
-<p>
-                        Creo firmemente que pedir apoyo también es una
-                        forma de cuidarse. Por ello, busco promover un
-                        espacio de escucha, confianza y comprensión,
-                        donde cada persona pueda expresar sus inquietudes
-                        libremente, sin temor a ser juzgada, y explorar
-                        herramientas que contribuyan a su bienestar
-                        emocional y desarrollo personal.
-                    </p>
-<p>
-                        Reconozco que cada persona tiene una historia
-                        única, sus propios tiempos y fortalezas. Por eso,
-                        considero fundamental brindar un acompañamiento
-                        humano, respetuoso y sensible a las necesidades
-                        individuales, manteniendo siempre la disposición
-                        de aprender, adaptarme a nuevos desafíos y aportar
-                        lo mejor de mí para apoyar a quienes lo necesitan.
-                    </p>
-<a class="ruth-btn" href="contacto.html">
-                        Contactarme <span aria-hidden="true">↗</span>
-</a>
-<!-- Datos personales -->
-<div class="ruth-personal-card">
-<h3>Datos personales</h3>
-<p>
-<strong>Edad:</strong> 20 años
-                        </p>
-<p>
-<strong>Carrera:</strong>
-                            Licenciatura en Psicología Clínica
-                        </p>
-<p>
-<strong>Universidad:</strong>
-                            Universidad Mariano Gálvez de Guatemala
-                        </p>
-</div>
-</div>
-</div>
+      <p class="ruth-photo-caption">
+        Cada día es una oportunidad para aprender y crecer.
+      </p>
+    </div>
+
+    <div class="ruth-bio">
+      <p class="ruth-eyebrow">Sobre mí</p>
+
+      <h2>
+        Soy Ruth Chavac.
+        <br>
+        <em>Estoy aquí para escucharte.</em>
+      </h2>
+
+      <p>
+        Tengo 20 años y soy una psicóloga especializada en el
+        área clínica, apasionada por la salud mental y el
+        aprendizaje continuo. Me caracteriza una actitud
+        proactiva, orientada a la adquisición constante de
+        conocimientos y al fortalecimiento de mis habilidades
+        clínicas y profesionales. Destaco por mi comunicación
+        empática y efectiva, mi capacidad para trabajar en
+        equipo y mi compromiso con la responsabilidad y el
+        crecimiento profesional.
+      </p>
+
+      <p>
+        Creo firmemente que pedir apoyo también es una forma
+        de cuidarse. Por ello, busco promover un espacio de
+        escucha, confianza y comprensión, donde cada persona
+        pueda expresar sus inquietudes libremente, sin temor
+        a ser juzgada, y explorar herramientas que contribuyan
+        a su bienestar emocional y desarrollo personal.
+      </p>
+
+      <p>
+        Reconozco que cada persona tiene una historia única,
+        sus propios tiempos y fortalezas. Por eso, considero
+        fundamental brindar un acompañamiento humano,
+        respetuoso y sensible a las necesidades individuales,
+        manteniendo siempre la disposición de aprender,
+        adaptarme a nuevos desafíos y aportar lo mejor de mí
+        para apoyar a quienes lo necesitan.
+      </p>
+
+      <a href="contacto.html" class="ruth-btn">
+        Contactarme <span aria-hidden="true">↗</span>
+      </a>
+
+      <div class="ruth-personal-card">
+        <h3>Datos personales</h3>
+        <p><strong>Edad:</strong> 20 años</p>
+        <p>
+          <strong>Carrera:</strong>
+          Licenciatura en Psicología Clínica
+        </p>
+        <p>
+          <strong>Universidad:</strong>
+          Universidad Mariano Gálvez de Guatemala
+        </p>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 <!-- FORMACIÓN ACADÉMICA -->
 <section class="ruth-section ruth-soft" id="formacion-academica">
-<div class="ruth-container">
-<div class="ruth-heading">
-<p class="ruth-eyebrow">
-                        Mi trayectoria
-                    </p>
-<h2>
-                        Formación con propósito,
-                        <br/>
-<em>aprendizaje continuo.</em>
-</h2>
-<p>
-                        Mi formación académica es una parte
-                        fundamental de mi desarrollo personal
-                        y profesional.
-                    </p>
-</div>
-<div class="ruth-profile-grid">
-<!-- Universidad -->
-<article class="ruth-card">
-<span class="ruth-card-number">
-                            01 / EDUCACIÓN SUPERIOR
-                        </span>
-<h3>Licenciatura en Psicología Clínica</h3>
-<p class="ruth-date">Estudios finalizados</p>
-<p>
-<strong>
-                                Universidad Mariano Gálvez de Guatemala
-                            </strong>
-</p>
-<p>- Graduada y titulada como Licenciada en Psicología Clínica.
-    <br>
-- Graduada en Maestría en Intervenciones Psicoterapéuticas.
-<br>
-- Graduada en Maestría en Criminología con Enfoque Psicológico Forense.</p>
-</article>
-<!-- Educación escolar -->
-<article class="ruth-card">
-<span class="ruth-card-number">
-                            02 / EDUCACIÓN ESCOLAR
-                        </span>
-<h3>Educación preprimaria a diversificado</h3>
-<p class="ruth-date">
-                            2010 – 2023
-                        </p>
-<p>
-<strong>Colegio Cristiano Torricelli</strong>
-</p>
-<p>
-                            Formación académica desde el nivel
-                            preprimario hasta el diversificado.
-                        </p>
-</article>
-<!-- Formación complementaria -->
-<article class="ruth-card">
-<span class="ruth-card-number">
-                           03 / DESARROLLO PERSONAL
-                        </span>
-<h3>Aprendizaje continuo</h3>
-<p>
-                            Me interesa continuar desarrollando
-                            mis conocimientos y habilidades en
-                            Psicología Clínica, salud mental,
-                            comunicación y relaciones humanas.
-                        </p>
+  <div class="ruth-container">
 
-</article>
-</div>
-</div>
+    <div class="ruth-heading">
+      <p class="ruth-eyebrow">Mi trayectoria</p>
+      <h2>
+        Formación con propósito,
+        <br>
+        <em>aprendizaje continuo.</em>
+      </h2>
+      <p>
+        Mi formación académica es una parte fundamental
+        de mi desarrollo personal y profesional.
+      </p>
+    </div>
+
+    <div class="ruth-profile-grid">
+
+      <article class="ruth-card">
+        <span class="ruth-card-number">
+          01 / EDUCACIÓN SUPERIOR
+        </span>
+        <h3>Licenciatura en Psicología Clínica</h3>
+        <p class="ruth-date">Estudios finalizados</p>
+        <p>
+          <strong>Universidad Mariano Gálvez de Guatemala</strong>
+        </p>
+        <p>
+          - Graduada y titulada como licenciada en Psicología Clínica.
+          <br>
+          - Graduada de la Maestría en Intervenciones Psicoterapéuticas.
+          <br>
+          - Graduada de la Maestría en Criminología con Enfoque
+          Psicológico Forense.
+        </p>
+      </article>
+
+      <article class="ruth-card">
+        <span class="ruth-card-number">
+          02 / EDUCACIÓN ESCOLAR
+        </span>
+        <h3>Educación preprimaria a diversificado</h3>
+        <p class="ruth-date">2010 – 2023</p>
+        <p><strong>Colegio Cristiano Torricelli</strong></p>
+        <p>
+          Formación académica desde el nivel preprimario
+          hasta el diversificado.
+        </p>
+      </article>
+
+      <article class="ruth-card">
+        <span class="ruth-card-number">
+          03 / DESARROLLO PERSONAL
+        </span>
+        <h3>Aprendizaje continuo</h3>
+        <p>
+          Me interesa continuar desarrollando mis conocimientos
+          y habilidades en Psicología Clínica, salud mental,
+          comunicación y relaciones humanas.
+        </p>
+      </article>
+
+    </div>
+  </div>
 </section>
+
 <!-- EXPERIENCIA LABORAL -->
 <section class="ruth-section" id="experiencia-laboral">
-<div class="ruth-container">
-<div class="ruth-heading">
-<p class="ruth-eyebrow">
-                        Mi experiencia
-                    </p>
-<h2>
-                        Responsabilidad,
-                        <em>organización y servicio.</em>
-</h2>
-<p>
-                        Mi experiencia en el ámbito administrativo
-                        me ha permitido fortalecer mis habilidades
-                        de organización, comunicación y atención
-                        a las personas.
-                    </p>
-</div>
-<div class="ruth-profile-grid">
-<!-- Experiencia 1 -->
-<article class="ruth-card">
-<span class="ruth-card-number">
-                            EXPERIENCIA 01
-                        </span>
-<h3>Auxiliar Contable</h3>
-<p>
-<strong>Colegio Torricelli</strong>
-</p>
-<p class="ruth-date">
-                            Enero de 2025 – Presente (2026)
-                        </p>
-<ul>
-<li>Elaboración de planillas.</li>
-<li>
-                                Control diario de los ingresos
-                                y egresos de caja.
-                            </li>
-<li>
-                                Emisión de recibos y facturas
-                                electrónicas de colegiaturas.
-                            </li>
-<li>Atención y servicio al cliente.</li>
-<li>
-                                Gestión de procesos relacionados
-                                con el IGSS y el Ministerio de Trabajo.
-                            </li>
-</ul>
-</article>
-<!-- Experiencia 2 -->
-<article class="ruth-card">
-<span class="ruth-card-number">
-                            EXPERIENCIA 02
-                        </span>
-<h3>Auxiliar de Secretaría</h3>
-<p>
-<strong>Colegio Torricelli</strong>
-</p>
-<p class="ruth-date">
-                            Enero – Diciembre de 2024
-                        </p>
-<ul>
-<li>Atención y servicio al cliente.</li>
-<li>
-                                Revisión de expedientes estudiantiles.
-                            </li>
-<li>
-                                Manejo de procesos relacionados
-                                con el sistema SIRE.
-                            </li>
-<li>
-                                Gestión de documentación del
-                                Ministerio de Educación.
-                            </li>
-<li>
-                                Redacción de notas, fotocopias,
-                                llamadas y correos electrónicos.
-                            </li>
-<li>
-                                Actualización de registros escolares
-                                y bases de datos.
-                            </li>
-</ul>
-</article>
-<!-- Experiencia 3 -->
-<article class="ruth-card">
-<span class="ruth-card-number">
-                            EXPERIENCIA 03
-                        </span>
-<h3>Vacacionista de Auxiliar Administrativa</h3>
-<p>
-<strong>Colegio Torricelli</strong>
-</p>
-<p class="ruth-date">
-                            Octubre de 2023
-                        </p>
-<ul>
-<li>Atención y servicio al cliente.</li>
-<li>
-                                Revisión de expedientes estudiantiles.
-                            </li>
-<li>
-                                Apoyo en procesos del sistema SIRE.
-                            </li>
-<li>
-                                Organización de papelería del
-                                Ministerio de Educación.
-                            </li>
-<li>
-                                Redacción de notas y gestión
-                                de llamadas y correos.
-                            </li>
-<li>
-                                Apoyo en la actualización de
-                                registros escolares y bases de datos.
-                            </li>
-</ul>
-</article>
-</div>
-</div>
+  <div class="ruth-container">
+
+    <div class="ruth-heading">
+      <p class="ruth-eyebrow">Mi experiencia</p>
+      <h2>
+        Responsabilidad,
+        <em>organización y servicio.</em>
+      </h2>
+      <p>
+        Mi experiencia en el ámbito administrativo me ha
+        permitido fortalecer mis habilidades de organización,
+        comunicación y atención a las personas.
+      </p>
+    </div>
+
+    <div class="ruth-profile-grid">
+
+      <article class="ruth-card">
+        <span class="ruth-card-number">EXPERIENCIA 01</span>
+        <h3>Auxiliar Contable</h3>
+        <p><strong>Colegio Torricelli</strong></p>
+        <p class="ruth-date">Enero de 2025 – Presente (2026)</p>
+        <ul>
+          <li>Elaboración de planillas.</li>
+          <li>Control diario de ingresos y egresos de caja.</li>
+          <li>Emisión de recibos y facturas electrónicas de colegiaturas.</li>
+          <li>Atención y servicio al cliente.</li>
+          <li>
+            Gestión de procesos relacionados con el IGSS
+            y el Ministerio de Trabajo.
+          </li>
+        </ul>
+      </article>
+
+      <article class="ruth-card">
+        <span class="ruth-card-number">EXPERIENCIA 02</span>
+        <h3>Auxiliar de Secretaría</h3>
+        <p><strong>Colegio Torricelli</strong></p>
+        <p class="ruth-date">Enero – Diciembre de 2024</p>
+        <ul>
+          <li>Atención y servicio al cliente.</li>
+          <li>Revisión de expedientes estudiantiles.</li>
+          <li>Manejo de procesos relacionados con el sistema SIRE.</li>
+          <li>
+            Gestión de documentación del Ministerio de Educación.
+          </li>
+          <li>
+            Redacción de notas, fotocopias, llamadas
+            y correos electrónicos.
+          </li>
+          <li>
+            Actualización de registros escolares y bases de datos.
+          </li>
+        </ul>
+      </article>
+
+      <article class="ruth-card">
+        <span class="ruth-card-number">EXPERIENCIA 03</span>
+        <h3>Vacacionista de Auxiliar Administrativa</h3>
+        <p><strong>Colegio Torricelli</strong></p>
+        <p class="ruth-date">Octubre de 2023</p>
+        <ul>
+          <li>Atención y servicio al cliente.</li>
+          <li>Revisión de expedientes estudiantiles.</li>
+          <li>Apoyo en procesos del sistema SIRE.</li>
+          <li>
+            Organización de papelería del Ministerio de Educación.
+          </li>
+          <li>
+            Redacción de notas y gestión de llamadas y correos.
+          </li>
+          <li>
+            Apoyo en la actualización de registros escolares
+            y bases de datos.
+          </li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
 </section>
-<!-- CURRÍCULUM PDF -->
+
+<!-- CURRÍCULUM -->
 <section class="ruth-section ruth-soft" id="curriculum">
-<div class="ruth-container">
-<div class="ruth-cv-panel">
-<div>
-<p class="ruth-eyebrow">
-                            Documento profesional
-                        </p>
-<h3>Mi currículum vitae</h3>
-<p>
-                            Consulta mi formación académica,
-                            experiencia laboral y trayectoria.
-                        </p>
-</div>
-<!--
-                        Guarda tu CV terminado en PDF en esta
-                        misma carpeta con el nombre:
+  <div class="ruth-container">
 
-                        cv_ruth_chavac.pdf
+    <div class="ruth-cv-panel">
+      <div>
+        <p class="ruth-eyebrow">Documento profesional</p>
+        <h3>Mi currículum vitae</h3>
+        <p>
+          Consulta mi formación académica,
+          experiencia laboral y trayectoria.
+        </p>
+      </div>
 
-                        Este botón descargará el archivo.
-                    -->
-<a class="ruth-btn" download="" href="cv_vitaeruth_chavac.pdf">
+      <a href="cv_vitaeruth_chavac.pdf"
+         class="ruth-btn"
+         download>
+        Descargar CV en PDF
+        <span aria-hidden="true">↓</span>
+      </a>
+    </div>
 
-                        Descargar CV en PDF
-                        <span aria-hidden="true">↓</span>
-</a>
-</div>
-</div>
+  </div>
 </section>
-<!-- INFOGRAFÍA PERSONALIZADA -->
-<section class="ruth-section" id="mi-infografia">
-<div class="ruth-container">
-<div class="ruth-heading">
-<p class="ruth-eyebrow">
-                        Mi manera de ver el bienestar
-                    </p>
-<h2>
-                        Pequeñas acciones,
-                        <em>grandes aprendizajes.</em>
-</h2>
-<p>
-                        Para mí, el bienestar también se relaciona
-                        con la forma en que escuchamos, comprendemos,
-                        aprendemos y acompañamos a los demás.
-                    </p>
-</div>
-<!--
-                    INFOGRAFÍA ORIGINAL CREADA PARA ESTA PÁGINA.
-                    Puedes modificar los textos o los iconos.
-                -->
-<div class="ruth-infographic">
-<article class="ruth-info-step">
-<div aria-hidden="true" class="ruth-info-icon">
-                            ♡
-                        </div>
-<span class="ruth-info-number">
-                            01 / ESCUCHAR
-                        </span>
-<h3>Escucha activa</h3>
-<p>
-                            Prestar atención a las palabras
-                            y emociones de los demás ayuda a
-                            fortalecer la comunicación.
-                        </p>
-</article>
-<article class="ruth-info-step">
-<div aria-hidden="true" class="ruth-info-icon">
-                            ☺
-                        </div>
-<span class="ruth-info-number">
-                            02 / COMPRENDER
-                        </span>
-<h3>Empatía</h3>
-<p>
-                            Reconocer que cada persona vive
-                            experiencias diferentes nos invita
-                            a relacionarnos con respeto.
-                        </p>
-</article>
-<article class="ruth-info-step">
-<div aria-hidden="true" class="ruth-info-icon">
-                            ♧
-                        </div>
-<span class="ruth-info-number">
-                            03 / APRENDER
-                        </span>
-<h3>Crecimiento personal</h3>
-<p>
-                            Aprender cosas nuevas y reflexionar
-                            sobre nuestras experiencias permite
-                            desarrollar habilidades.
-                        </p>
-</article>
-<article class="ruth-info-step">
-<div aria-hidden="true" class="ruth-info-icon">
-                            ✧
-                        </div>
-<span class="ruth-info-number">
-                            04 / ACOMPAÑAR
-                        </span>
-<h3>Respeto y apoyo</h3>
-<p>
-                            Un trato amable y responsable ayuda
-                            a construir relaciones humanas más
-                            positivas.
-                        </p>
-</article>
-</div>
-<p class="ruth-note" style="margin-top: 20px;">
-                    Infografía educativa elaborada para presentar
-                    valores personales relacionados con la
-                    comunicación, la empatía y el aprendizaje.
-                    No sustituye la orientación psicológica
-                    profesional.
-                </p>
-</div>
-</section>
-<!-- MIS PASATIEMPOS -->
-<section class="ruth-section ruth-soft" id="mis-pasatiempos">
-<div class="ruth-container">
-<div class="ruth-heading">
-<p class="ruth-eyebrow">
-                        Un poco más sobre mí
-                    </p>
-<h2>
-                        Las cosas que me hacen
-                        <em>feliz.</em>
-</h2>
-<p>
-                        En mi tiempo libre disfruto de actividades
-                        que me permiten compartir, distraerme y
-                        mantener un equilibrio entre mis estudios
-                        y mi vida personal.
-                    </p>
-</div>
-<div class="ruth-hobbies-grid">
-<!-- Pasatiempo 1 -->
-<article class="ruth-hobby">
-<div aria-hidden="true" class="ruth-hobby-icon">
-                            👨‍👩‍👧‍👦
-                        </div>
-<h3>Convivir con mi familia</h3>
-<p>
-                            Disfruto compartir momentos especiales,
-                            conversar y crear recuerdos con las
-                            personas que más quiero.
-                        </p>
-</article>
-<!-- Pasatiempo 2 -->
-<article class="ruth-hobby">
-<div aria-hidden="true" class="ruth-hobby-icon">
-                            🎵
-                        </div>
-<h3>Escuchar música</h3>
-<p>
-                            La música me acompaña en diferentes
-                            momentos del día y me permite disfrutar
-                            de mis canciones favoritas.
-                        </p>
-</article>
-<!-- Pasatiempo 3 -->
-<article class="ruth-hobby">
-<div aria-hidden="true" class="ruth-hobby-icon">
-                            🎬
-                        </div>
-<h3>Ir al cine</h3>
-<p>
-                            Me gusta disfrutar películas,
-                            descubrir historias y pasar un
-                            momento agradable.
-                        </p>
-</article>
-<!-- Pasatiempo 4 -->
-<article class="ruth-hobby">
-<div aria-hidden="true" class="ruth-hobby-icon">
-                            🏃‍♀️
-                        </div>
-<h3>Hacer ejercicio</h3>
-<p>
-                            Dedicar tiempo a la actividad física
-                            me ayuda a mantenerme activa y a
-                            incorporar hábitos saludables.
-                        </p>
-</article>
-</div>
-</div>
-</section>
-<!-- VIDEOS -->
 
+<!-- =========================================
+     NUEVA INFOGRAFÍA DE PASATIEMPOS
+     ========================================= -->
 
-<section class="ruth-section ruth-soft extra-info" id="perfil-profesional">
-<div class="container">
-<div class="section-heading"><span class="eyebrow">PSICOLOGÍA · PSICOTERAPIA · PSICOLOGÍA FORENSE</span>
-<h2>Perfil y formación profesional</h2><p>Atención dirigida a niños, adolescentes, jóvenes y adultos.</p></div>
-<div class="extra-grid">
-<article class="extra-card"><h3>Universidad Mariano Gálvez de Guatemala</h3>
-<ul><li>Licenciatura en Psicología Clínica</li><li>Maestría en Intervenciones Psicoterapéuticas</li><li>Maestría en Criminología con Enfoque Psicológico Forense</li></ul>
-<p>Profesional orientada a la salud mental, las intervenciones psicoterapéuticas y la comprensión del comportamiento humano en contextos clínicos y forenses.</p></article>
-<article class="extra-card"><h3>Maestría en Intervenciones Psicoterapéuticas</h3><p>Enfocada en la evaluación e intervención psicológica mediante estrategias psicoterapéuticas adaptadas a las necesidades de las personas.</p>
-<h3>Maestría en Criminología con Enfoque Psicológico Forense</h3><p>Orientada al estudio del comportamiento humano relacionado con el ámbito criminológico y judicial.</p></article>
-</div></div></section>
+<section class="ruth-happiness" id="mi-infografia">
+
+  <div class="ruth-happiness-container">
+
+    <div class="happiness-header">
+      <span class="happiness-label">✦ MIS PASATIEMPOS ✦</span>
+
+      <h2>Lo que me hace <em>feliz</em></h2>
+
+      <p>
+        Mis pasatiempos son una parte muy importante de mi vida,
+        porque me permiten recargar energías, mantener el equilibrio
+        y disfrutar de las cosas que realmente me hacen bien.
+      </p>
+
+      <div class="happiness-decoration">♡</div>
+    </div>
+
+    <div class="happiness-grid">
+
+      <!-- HACER EJERCICIO -->
+      <article class="happiness-card happiness-green">
+
+        <div class="happiness-image">
+          <img src="ejercicio.jpg"
+               alt="Mujer haciendo ejercicio"
+               loading="lazy">
+        </div>
+
+        <div class="happiness-content">
+          <span class="happiness-icon">🏋️‍♀️</span>
+          <h3>Hacer ejercicio</h3>
+
+          <p>
+            Me encanta mantenerme activa, ya sea en el gimnasio,
+            caminando al aire libre o realizando rutinas en casa.
+            El ejercicio me ayuda a cuidar mi salud física y mental,
+            liberar el estrés y sentirme con más energía y confianza.
+          </p>
+
+          <div class="happiness-benefits">
+            <strong>✧ Me aporta:</strong>
+            <ul>
+              <li>Bienestar físico y mental</li>
+              <li>Disciplina y constancia</li>
+              <li>Más energía y mejor estado de ánimo</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- IR AL CINE -->
+      <article class="happiness-card happiness-purple">
+
+        <div class="happiness-image">
+          <img src="cine.jpg"
+               alt="Sala de cine con palomitas"
+               loading="lazy">
+        </div>
+
+        <div class="happiness-content">
+          <span class="happiness-icon">🎬</span>
+          <h3>Ir al cine</h3>
+
+          <p>
+            Disfruto mucho ver películas, ya sea en solitario
+            o en buena compañía. El cine me permite escapar
+            de la rutina, vivir nuevas historias, conocer
+            diferentes perspectivas y disfrutar del arte
+            y la creatividad en la pantalla.
+          </p>
+
+          <div class="happiness-benefits">
+            <strong>✧ Me aporta:</strong>
+            <ul>
+              <li>Entretenimiento y diversión</li>
+              <li>Nuevas ideas y perspectivas</li>
+              <li>Momentos de relajación y desconexión</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- CAFÉ Y ATARDECERES -->
+      <article class="happiness-card happiness-peach">
+
+        <div class="happiness-image">
+          <img src="cafe.jpg"
+               alt="Taza de café frente a un atardecer"
+               loading="lazy">
+        </div>
+
+        <div class="happiness-content">
+          <span class="happiness-icon">☕</span>
+          <h3>Tomar café y ver atardeceres</h3>
+
+          <p>
+            El café es mi compañero ideal para disfrutar de
+            un buen momento, ya sea leyendo, trabajando
+            o simplemente contemplando la vida.
+            Los atardeceres me recuerdan que siempre
+            hay belleza en lo simple.
+          </p>
+
+          <div class="happiness-benefits">
+            <strong>✧ Me aporta:</strong>
+            <ul>
+              <li>Calma y claridad mental</li>
+              <li>Inspiración y creatividad</li>
+              <li>Apreciación por los pequeños detalles</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- FAMILIA -->
+      <article class="happiness-card happiness-blue">
+
+        <div class="happiness-image">
+          <img src="familia.jpg"
+               alt="Familia compartiendo un atardecer"
+               loading="lazy">
+        </div>
+
+        <div class="happiness-content">
+          <span class="happiness-icon">👨‍👩‍👧‍👦</span>
+          <h3>Convivir con mi familia</h3>
+
+          <p>
+            Mi familia es mi mayor apoyo y mi lugar seguro.
+            Disfruto compartir momentos, reír juntos,
+            conversar, celebrar y crear recuerdos
+            que siempre llevaré en el corazón.
+          </p>
+
+          <div class="happiness-benefits">
+            <strong>✧ Me aporta:</strong>
+            <ul>
+              <li>Amor y apoyo incondicional</li>
+              <li>Fuerza en los momentos difíciles</li>
+              <li>Felicidad y sentido de pertenencia</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- MÚSICA -->
+      <article class="happiness-card happiness-lilac">
+
+        <div class="happiness-image">
+          <img src="musica.jpg"
+               alt="Audífonos para escuchar música"
+               loading="lazy">
+        </div>
+
+        <div class="happiness-content">
+          <span class="happiness-icon">🎧</span>
+          <h3>Escuchar música</h3>
+
+          <p>
+            La música es mi refugio. Me acompaña en cada
+            etapa del día, me motiva, me relaja y me hace
+            sentir en paz. Tiene el poder de transformar
+            mi estado de ánimo y hacer que todo
+            se sienta un poco mejor.
+          </p>
+
+          <div class="happiness-benefits">
+            <strong>✧ Me aporta:</strong>
+            <ul>
+              <li>Bienestar emocional</li>
+              <li>Motivación y energía</li>
+              <li>Equilibrio y armonía</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="happiness-footer">
+      <span class="heart">♥</span>
+      <p>Mis pasatiempos, mi equilibrio</p>
+      <small>Pequeños momentos, grandes felicidades</small>
+    </div>
+
+  </div>
+</section>
+
+<!-- PERFIL PROFESIONAL -->
+<section class="ruth-section ruth-soft extra-info"
+         id="perfil-profesional">
+
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">
+        PSICOLOGÍA · PSICOTERAPIA · PSICOLOGÍA FORENSE
+      </span>
+
+      <h2>Perfil y formación profesional</h2>
+
+      <p>
+        Atención dirigida a niños, adolescentes,
+        jóvenes y adultos.
+      </p>
+    </div>
+
+    <div class="extra-grid">
+
+      <article class="extra-card">
+        <h3>Universidad Mariano Gálvez de Guatemala</h3>
+
+        <ul>
+          <li>Licenciatura en Psicología Clínica</li>
+          <li>Maestría en Intervenciones Psicoterapéuticas</li>
+          <li>
+            Maestría en Criminología con Enfoque Psicológico Forense
+          </li>
+        </ul>
+
+        <p>
+          Profesional orientada a la salud mental,
+          las intervenciones psicoterapéuticas y la comprensión
+          del comportamiento humano en contextos clínicos
+          y forenses.
+        </p>
+      </article>
+
+      <article class="extra-card">
+
+        <h3>Maestría en Intervenciones Psicoterapéuticas</h3>
+        <p>
+          Enfocada en la evaluación e intervención psicológica
+          mediante estrategias psicoterapéuticas adaptadas
+          a las necesidades de las personas.
+        </p>
+
+        <h3>
+          Maestría en Criminología con Enfoque Psicológico Forense
+        </h3>
+        <p>
+          Orientada al estudio del comportamiento humano
+          relacionado con el ámbito criminológico y judicial.
+        </p>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
 </main>
+
 <!-- PIE DE PÁGINA -->
 <footer class="footer">
-<div class="container footer-main">
-<a class="brand footer-brand" href="index.html">
-<img alt="" src="logo-ruth-chavac.jpg"/>
-<span>
-<strong>Ruth Chavac</strong>
-<small>PSICOLOGÍA Y BIENESTAR</small>
-</span>
-</a>
-<p>
-                Un espacio de aprendizaje, escucha y crecimiento
-                personal.
-            </p>
-<div class="footer-links">
-<a href="servicios.html">Servicios</a>
-<a href="agendar.html">Agendar cita</a>
-<a href="ubicacion.html">Ubicación</a>
-<a href="contacto.html">Contacto</a>
-</div>
-</div>
-<div class="container footer-bottom">
-<span>
-                © <span id="year">2026</span>
-                Ruth Chavac. Todos los derechos reservados.
-            </span>
-<span>
-                La información de esta página es educativa
-                y no sustituye una evaluación psicológica
-                profesional.
-            </span>
-</div>
+
+  <div class="container footer-main">
+
+    <a href="index.html" class="brand footer-brand">
+      <img src="logo-ruth-chavac.jpg" alt="Logotipo de Ruth Chavac">
+
+      <span>
+        <strong>Ruth Chavac</strong>
+        <small>PSICOLOGÍA Y BIENESTAR</small>
+      </span>
+    </a>
+
+    <p>
+      Un espacio de aprendizaje, escucha
+      y crecimiento personal.
+    </p>
+
+    <div class="footer-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="agendar.html">Agendar cita</a>
+      <a href="ubicacion.html">Ubicación</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year">2026</span>
+      Ruth Chavac. Todos los derechos reservados.
+    </span>
+
+    <span>
+      La información de esta página es educativa
+      y no sustituye una evaluación psicológica profesional.
+    </span>
+
+  </div>
 </footer>
-<!-- Botón volver arriba -->
-<button aria-label="Volver arriba" class="back-to-top" id="backToTop">
 
-        ↑
-
-    </button>
-  
+<!-- VOLVER ARRIBA -->
+<button
+  class="back-to-top"
+  id="backToTop"
+  aria-label="Volver arriba">
+  ↑
+</button>
 
 </body>
 </html>
