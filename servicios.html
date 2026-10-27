@@ -330,5 +330,62 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<!-- Música de fondo -->
+<audio id="musicaFondo" loop preload="none">
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Botón de música -->
+<button id="botonMusica" type="button" aria-label="Reproducir música">
+    ♪ Activar música
+</button>
+
+<style>
+    #botonMusica {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        z-index: 9999;
+        background: #D99BAA;
+        color: white;
+        border: none;
+        padding: 13px 20px;
+        border-radius: 30px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        transition: 0.3s;
+    }
+
+    #botonMusica:hover {
+        background: #BD758A;
+        transform: translateY(-3px);
+    }
+</style>
+
+<script>
+    const musica = document.getElementById("musicaFondo");
+    const boton = document.getElementById("botonMusica");
+
+    musica.volume = 0.25;
+
+    boton.addEventListener("click", async () => {
+        if (musica.paused) {
+            try {
+                await musica.play();
+                boton.textContent = "♫ Pausar música";
+                boton.setAttribute("aria-label", "Pausar música");
+            } catch (error) {
+                console.error("No se pudo reproducir la música:", error);
+            }
+        } else {
+            musica.pause();
+            boton.textContent = "♪ Activar música";
+            boton.setAttribute("aria-label", "Reproducir música");
+        }
+    });
+</script>
+
 </body>
 </html>
