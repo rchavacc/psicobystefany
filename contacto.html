@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Descripción -->
     <meta name="description"
           content="Información de contacto de Ruth Chavac. Psicología y bienestar.">
 
@@ -20,13 +21,13 @@
         rel="stylesheet"
     >
 
-    <!-- Iconos de redes sociales -->
+    <!-- Iconos oficiales de redes sociales -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <!-- Estilos principales -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- JavaScript -->
@@ -35,7 +36,10 @@
     <!-- Estilos adicionales -->
     <style>
 
-        /* Botón de WhatsApp */
+        /* ==============================
+           BOTÓN DE WHATSAPP
+        ============================== */
+
         .whatsapp-btn {
             display: inline-flex;
             align-items: center;
@@ -52,94 +56,88 @@
             transition: all 0.3s ease;
         }
 
+        .whatsapp-btn i {
+            font-size: 21px;
+        }
+
         .whatsapp-btn:hover {
             background: #128C7E;
             transform: translateY(-3px);
             box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
         }
 
-        .whatsapp-btn i {
-            font-size: 21px;
-        }
+        /* ==============================
+           REDES SOCIALES
+        ============================== */
 
-        /* Contenedor de redes sociales */
         .social-links {
-            margin-top: 35px;
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
         }
 
         .social-links > strong {
             display: block;
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 21px;
+            margin-bottom: 12px;
         }
 
         .social-links > p {
-            margin-bottom: 20px;
+            max-width: 450px;
+            margin: 0 auto 25px;
             line-height: 1.7;
         }
 
-        /* Botones de redes sociales */
+        /* Contenedor de botones */
         .social-buttons {
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 15px;
+            width: 100%;
         }
 
-        .social-buttons a {
+        /* Diseño general */
+        .social-buttons a,
+        .social-buttons .facebook,
+        .social-buttons .instagram,
+        .social-buttons .tiktok {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 18px;
-            border-radius: 10px;
+            gap: 12px;
+            padding: 14px 22px;
+            border-radius: 12px;
+            background: #7C9184;
+            color: #ffffff !important;
             text-decoration: none;
-            color: #ffffff;
             font-size: 14px;
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
+        /* Iconos oficiales */
         .social-buttons a i {
-            font-size: 20px;
+            font-size: 22px;
+            color: #ffffff;
         }
 
-        .social-buttons a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        /* Flechas */
+        .social-buttons a span {
+            font-size: 16px;
+            color: #ffffff;
         }
 
-        /* Facebook */
-        .social-buttons .facebook {
-            background: #1877F2;
-        }
-
-        .social-buttons .facebook:hover {
-            background: #0c5dc7;
-        }
-
-        /* Instagram */
-        .social-buttons .instagram {
-            background: linear-gradient(
-                45deg,
-                #FEDA75,
-                #FA7E1E,
-                #D62976,
-                #962FBF,
-                #4F5BD5
-            );
-        }
-
-        .social-buttons .instagram:hover {
-            opacity: 0.9;
-        }
-
-        /* TikTok */
-        .social-buttons .tiktok {
-            background: #111111;
-        }
-
+        /* Efecto hover */
+        .social-buttons a:hover,
+        .social-buttons .facebook:hover,
+        .social-buttons .instagram:hover,
         .social-buttons .tiktok:hover {
-            background: #333333;
+            background: #526B5C;
+            color: #ffffff;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(82, 107, 92, 0.25);
         }
 
         /* Enlaces de contacto */
@@ -153,30 +151,35 @@
             text-decoration: underline;
         }
 
-        /* Responsive para celulares */
+        /* ==============================
+           RESPONSIVE CELULARES
+        ============================== */
+
         @media (max-width: 768px) {
+
+            .social-links {
+                text-align: center;
+            }
 
             .social-buttons {
                 flex-direction: column;
-                width: 100%;
+                align-items: center;
+                justify-content: center;
             }
 
             .social-buttons a {
                 width: 100%;
-                justify-content: center;
+                max-width: 280px;
                 box-sizing: border-box;
             }
 
             .whatsapp-btn {
                 width: 100%;
-                max-width: 100%;
+                max-width: 280px;
                 box-sizing: border-box;
             }
 
-            .contact-info-card {
-                min-width: 0;
-            }
-
+            .contact-info-card,
             .contact-info-card > div {
                 min-width: 0;
             }
@@ -193,8 +196,12 @@
 
 <body>
 
-    <!-- Barra superior -->
+    <!-- ==============================
+         BARRA SUPERIOR
+    ============================== -->
+
     <div class="topbar">
+
         <div class="container topbar-inner">
 
             <span>
@@ -207,10 +214,15 @@
             </a>
 
         </div>
+
     </div>
 
-    <!-- Encabezado -->
+    <!-- ==============================
+         ENCABEZADO
+    ============================== -->
+
     <header class="header">
+
         <div class="container nav-wrap">
 
             <!-- Logo -->
@@ -247,15 +259,25 @@
             <!-- Navegación -->
             <nav class="nav" id="mainNav">
 
-                <a href="index.html">Inicio</a>
+                <a href="index.html">
+                    Inicio
+                </a>
 
-                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="sobre-mi.html">
+                    Sobre mí
+                </a>
 
-                <a href="servicios.html">Mis servicios</a>
+                <a href="servicios.html">
+                    Mis servicios
+                </a>
 
-                <a href="agendar.html">Agendar cita</a>
+                <a href="agendar.html">
+                    Agendar cita
+                </a>
 
-                <a href="ubicacion.html">Ubicación</a>
+                <a href="ubicacion.html">
+                    Ubicación
+                </a>
 
                 <a href="contacto.html" class="active">
                     Contacto
@@ -269,9 +291,13 @@
             </nav>
 
         </div>
+
     </header>
 
-    <!-- Contenido principal -->
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+    ============================== -->
+
     <main>
 
         <!-- Presentación -->
@@ -290,15 +316,18 @@
                 </h1>
 
                 <p>
-                    Consulta sobre servicios, horarios y disponibilidad
-                    de citas.
+                    Consulta sobre servicios, horarios
+                    y disponibilidad de citas.
                 </p>
 
             </div>
 
         </section>
 
-        <!-- Información de contacto -->
+        <!-- ==============================
+             INFORMACIÓN DE CONTACTO
+        ============================== -->
+
         <section class="section">
 
             <div class="container contact-page-grid">
@@ -318,19 +347,28 @@
                         horarios y disponibilidad de citas.
                     </p>
 
-                    <!-- WhatsApp -->
+                    <!-- ==============================
+                         WHATSAPP
+                    ============================== -->
+
                     <div class="contact-info-card">
 
                         <span class="detail-icon">
-                            <i class="fa-brands fa-whatsapp"
-                               aria-hidden="true"></i>
+                            <i
+                                class="fa-brands fa-whatsapp"
+                                aria-hidden="true"
+                            ></i>
                         </span>
 
                         <div>
 
-                            <strong>Teléfono / WhatsApp</strong>
+                            <strong>
+                                Teléfono / WhatsApp
+                            </strong>
 
-                            <small>+502 4750-5554</small>
+                            <small>
+                                +502 4750-5554
+                            </small>
 
                             <a
                                 class="whatsapp-btn"
@@ -339,8 +377,10 @@
                                 rel="noopener noreferrer"
                             >
 
-                                <i class="fa-brands fa-whatsapp"
-                                   aria-hidden="true"></i>
+                                <i
+                                    class="fa-brands fa-whatsapp"
+                                    aria-hidden="true"
+                                ></i>
 
                                 Enviar mensaje
 
@@ -352,39 +392,59 @@
 
                     </div>
 
-                    <!-- Correo electrónico -->
+                    <!-- ==============================
+                         CORREO ELECTRÓNICO
+                    ============================== -->
+
                     <div class="contact-info-card">
 
                         <span class="detail-icon">
-                            <i class="fa-solid fa-envelope"
-                               aria-hidden="true"></i>
+
+                            <i
+                                class="fa-solid fa-envelope"
+                                aria-hidden="true"
+                            ></i>
+
                         </span>
 
                         <div>
 
-                            <strong>Correo electrónico</strong>
+                            <strong>
+                                Correo electrónico
+                            </strong>
 
                             <small>
+
                                 <a href="mailto:psicologaruth@gmail.com">
                                     psicologaruth@gmail.com
                                 </a>
+
                             </small>
 
                         </div>
 
                     </div>
 
-                    <!-- Dirección -->
+                    <!-- ==============================
+                         DIRECCIÓN
+                    ============================== -->
+
                     <div class="contact-info-card">
 
                         <span class="detail-icon">
-                            <i class="fa-solid fa-location-dot"
-                               aria-hidden="true"></i>
+
+                            <i
+                                class="fa-solid fa-location-dot"
+                                aria-hidden="true"
+                            ></i>
+
                         </span>
 
                         <div>
 
-                            <strong>Dirección</strong>
+                            <strong>
+                                Dirección
+                            </strong>
 
                             <small>
                                 28 Calle B, Finca San Rafael,
@@ -397,7 +457,10 @@
 
                     </div>
 
-                    <!-- Redes sociales -->
+                    <!-- ==============================
+                         REDES SOCIALES
+                    ============================== -->
+
                     <div
                         class="social-links"
                         aria-label="Redes sociales"
@@ -414,7 +477,7 @@
 
                         <div class="social-buttons">
 
-                            <!-- Facebook -->
+                            <!-- FACEBOOK -->
                             <a
                                 class="facebook"
                                 href="https://www.facebook.com/share/19Zc8JSdeN/?mibextid=wwXIfr"
@@ -430,11 +493,13 @@
 
                                 Facebook
 
-                                <span aria-hidden="true">↗</span>
+                                <span aria-hidden="true">
+                                    ↗
+                                </span>
 
                             </a>
 
-                            <!-- Instagram -->
+                            <!-- INSTAGRAM -->
                             <a
                                 class="instagram"
                                 href="https://www.instagram.com/psicobystef/"
@@ -450,11 +515,13 @@
 
                                 Instagram
 
-                                <span aria-hidden="true">↗</span>
+                                <span aria-hidden="true">
+                                    ↗
+                                </span>
 
                             </a>
 
-                            <!-- TikTok -->
+                            <!-- TIKTOK -->
                             <a
                                 class="tiktok"
                                 href="https://www.tiktok.com/@psicobystef"
@@ -470,7 +537,9 @@
 
                                 TikTok
 
-                                <span aria-hidden="true">↗</span>
+                                <span aria-hidden="true">
+                                    ↗
+                                </span>
 
                             </a>
 
@@ -486,13 +555,19 @@
 
     </main>
 
-    <!-- Pie de página -->
+    <!-- ==============================
+         PIE DE PÁGINA
+    ============================== -->
+
     <footer class="footer">
 
         <div class="container footer-main">
 
-            <!-- Logo del footer -->
-            <a class="brand footer-brand" href="index.html">
+            <!-- Logo -->
+            <a
+                class="brand footer-brand"
+                href="index.html"
+            >
 
                 <img
                     src="logo-ruth-chavac.jpg"
@@ -500,8 +575,15 @@
                 >
 
                 <span>
-                    <strong>Ruth Chavac</strong>
-                    <small>PSICOLOGÍA Y BIENESTAR</small>
+
+                    <strong>
+                        Ruth Chavac
+                    </strong>
+
+                    <small>
+                        PSICOLOGÍA Y BIENESTAR
+                    </small>
+
                 </span>
 
             </a>
@@ -513,13 +595,21 @@
             <!-- Enlaces -->
             <div class="footer-links">
 
-                <a href="servicios.html">Servicios</a>
+                <a href="servicios.html">
+                    Servicios
+                </a>
 
-                <a href="agendar.html">Agendar cita</a>
+                <a href="agendar.html">
+                    Agendar cita
+                </a>
 
-                <a href="ubicacion.html">Ubicación</a>
+                <a href="ubicacion.html">
+                    Ubicación
+                </a>
 
-                <a href="contacto.html">Contacto</a>
+                <a href="contacto.html">
+                    Contacto
+                </a>
 
             </div>
 
@@ -542,7 +632,10 @@
 
     </footer>
 
-    <!-- Botón volver arriba -->
+    <!-- ==============================
+         BOTÓN VOLVER ARRIBA
+    ============================== -->
+
     <button
         id="backToTop"
         class="back-to-top"
