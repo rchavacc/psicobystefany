@@ -17,37 +17,122 @@
 
 <style>
 
-/* INFOGRAFÍA EDITORIAL HORIZONTAL · RUTH CHAVAC */
-.ruth-happiness{padding:85px 18px;background:#f8f2f6;font-family:'DM Sans',sans-serif}
+/* INFOGRAFÍA ESTILO EDITORIAL CANVA · EXCLUSIVA PARA ESTA SECCIÓN */
+.ruth-happiness{padding:72px 18px;background:#f6f0f6;font-family:'DM Sans',sans-serif}
 .ruth-happiness *{box-sizing:border-box}
-.rh-poster{max-width:1250px;margin:auto;padding:clamp(22px,4vw,58px);border-radius:32px;background:#fffaf7;position:relative;overflow:hidden;box-shadow:0 20px 70px #6e47601c;isolation:isolate}
-.rh-poster:before{content:'';position:absolute;top:-105px;left:-85px;width:290px;height:260px;border-radius:40% 60% 70% 30%;background:#f8dce0;z-index:-1}
-.rh-poster:after{content:'';position:absolute;bottom:-115px;right:-80px;width:300px;height:260px;border-radius:60% 40% 30% 70%;background:#e9ddf4;z-index:-1}
-.rh-top{text-align:center;max-width:750px;margin:0 auto 35px;position:relative}
-.rh-eyebrow{font-size:12px;font-weight:700;letter-spacing:.35em;color:#9d6488;text-transform:uppercase}
-.rh-top h2{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,66px);line-height:1.12;color:#4b304a;margin:13px 0 17px}
-.rh-top h2 em{color:#c8799b;font-weight:500}
-.rh-top p{color:#6b5969;line-height:1.8;font-size:15px;max-width:680px;margin:auto}
-.rh-spark{color:#d58aa6;font-size:28px;letter-spacing:15px;margin-top:14px}
-.rh-layout{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;position:relative}
-.rh-tile{grid-column:span 2;border-radius:90px 22px 30px 22px;padding:20px 20px 22px;position:relative;min-width:0;transition:transform .3s ease,box-shadow .3s ease;border:1px solid #ffffffa8}
-.rh-tile:hover{transform:translateY(-5px);box-shadow:0 14px 30px #73546918}
-.rh-tile:nth-child(1),.rh-tile:nth-child(2){grid-column:span 3;display:grid;grid-template-columns:125px minmax(0,1fr);align-items:center;gap:20px;min-height:265px}
-.rh-tile:nth-child(3),.rh-tile:nth-child(4),.rh-tile:nth-child(5){min-height:350px}
-.rh-green{background:#eaf3e6}.rh-lavender{background:#f0e6f6}.rh-peach{background:#fae6df}.rh-blue{background:#e5f0f6}.rh-rose{background:#f7e4ec}
-.rh-art{width:116px;height:116px;border-radius:55% 45% 60% 40%;display:grid;place-items:center;background:#ffffffa8;font-size:61px;position:relative;margin:auto;box-shadow:inset 0 0 0 2px #ffffff70}
-.rh-art:after{content:'✦';position:absolute;top:-7px;right:0;color:#bf87a4;font-size:24px}
-.rh-tile:nth-child(n+3) .rh-art{margin:0 auto 18px;width:125px;height:125px}
-.rh-kicker{font-size:11px;font-weight:700;letter-spacing:.15em;color:#a46d89;text-transform:uppercase}
-.rh-tile h3{font-family:'Playfair Display',serif;color:#56374f;font-size:clamp(20px,2.3vw,27px);line-height:1.22;margin:7px 0 10px}
-.rh-tile p{font-size:13px;line-height:1.7;color:#655665;margin:0 0 13px}
-.rh-benefits{padding:11px 13px;background:#ffffff80;border-radius:15px;color:#70556c;font-size:12px;line-height:1.6}
-.rh-benefits strong{display:block;color:#8f547d;margin-bottom:3px}
-.rh-bottom{text-align:center;margin-top:34px;color:#956b89;font-family:'Playfair Display',serif;font-size:22px;font-style:italic}
-.rh-bottom span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.22em;font-style:normal;margin-top:7px}
-@media(max-width:950px){.rh-tile:nth-child(1),.rh-tile:nth-child(2){grid-template-columns:1fr;display:block;min-height:0}.rh-tile:nth-child(1) .rh-art,.rh-tile:nth-child(2) .rh-art{margin:0 auto 18px}.rh-layout{grid-template-columns:repeat(2,minmax(0,1fr))}.rh-tile,.rh-tile:nth-child(1),.rh-tile:nth-child(2){grid-column:span 1;min-height:0}.rh-tile:nth-child(n+3){min-height:0}}
-@media(max-width:600px){.ruth-happiness{padding:45px 12px}.rh-poster{padding:30px 17px;border-radius:24px}.rh-layout{grid-template-columns:1fr;gap:15px}.rh-tile,.rh-tile:nth-child(1),.rh-tile:nth-child(2){grid-column:1;display:grid;grid-template-columns:83px minmax(0,1fr);gap:13px;align-items:start;padding:17px;border-radius:50px 18px 24px 18px}.rh-tile:nth-child(n+3){min-height:0}.rh-art,.rh-tile:nth-child(n+3) .rh-art,.rh-tile:nth-child(1) .rh-art,.rh-tile:nth-child(2) .rh-art{width:78px;height:78px;font-size:39px;margin:0}.rh-art:after{font-size:15px}.rh-tile h3{font-size:21px}.rh-tile p{font-size:12px}.rh-benefits{font-size:11px}.rh-top{margin-bottom:25px}.rh-top p{font-size:13px}.rh-bottom{font-size:19px}}
-@media(prefers-reduced-motion:reduce){.rh-tile{transition:none}}
+.rh-poster{max-width:1280px;margin:auto;background:#fffdfa;border-radius:28px;overflow:hidden;box-shadow:0 18px 60px #5b38521c;position:relative}
+.rh-banner{background:linear-gradient(110deg,#6b4c88,#a978ad 56%,#d59ab3);padding:42px clamp(22px,5vw,66px);color:white;display:grid;grid-template-columns:1.5fr .5fr;gap:20px;align-items:center;position:relative;overflow:hidden}
+.rh-banner:before{content:'';position:absolute;width:260px;height:260px;border:3px solid #ffffff36;border-radius:50%;right:-60px;top:-130px}
+.rh-banner:after{content:'✦  ♡  ✿';position:absolute;right:50px;bottom:15px;font-size:30px;color:#ffffff70;letter-spacing:12px}
+.rh-overline{font-size:12px;letter-spacing:.35em;font-weight:700;color:#f9dce9}
+.rh-banner h2{font-family:'Playfair Display',serif;font-size:clamp(37px,5vw,67px);line-height:1.08;margin:12px 0;color:white}
+.rh-banner h2 em{color:#ffe1e8;font-weight:500}
+.rh-banner p{max-width:650px;font-size:15px;line-height:1.75;color:#fff5fa;margin:0}
+.rh-banner-art{display:grid;place-items:center;min-height:170px;position:relative}
+.rh-banner-art .rh-big-heart{font-size:clamp(85px,12vw,145px);color:#fbd7e4;line-height:1;text-shadow:0 12px 0 #ffffff23;transform:rotate(-12deg)}
+.rh-banner-art .rh-spark{position:absolute;top:0;right:16%;font-size:40px;color:#f7d2e4}
+.rh-body{padding:clamp(22px,4vw,52px);position:relative}
+.rh-intro{text-align:center;color:#8d6b87;font-size:12px;font-weight:700;letter-spacing:.28em;margin-bottom:28px}
+.rh-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:17px}
+.rh-panel{grid-column:span 4;min-width:0;border-radius:25px;padding:23px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:12px;border:1px solid #ffffffb5;transition:transform .3s ease,box-shadow .3s ease}
+.rh-panel:hover{transform:translateY(-5px);box-shadow:0 12px 28px #7a52731b}
+.rh-panel:nth-child(1),.rh-panel:nth-child(2){grid-column:span 6;flex-direction:row;align-items:center;min-height:240px}
+.rh-panel:nth-child(3),.rh-panel:nth-child(4),.rh-panel:nth-child(5){min-height:330px}
+.rh-panel:before{content:'';position:absolute;width:140px;height:140px;right:-60px;top:-75px;border-radius:50%;background:#ffffff69}
+.rh-green{background:#e8f1e5;--rh-accent:#5d876a}.rh-violet{background:#eee4f6;--rh-accent:#8667a5}.rh-peach{background:#fbe5dd;--rh-accent:#bc786a}.rh-blue{background:#e1eef5;--rh-accent:#5c88a7}.rh-pink{background:#f7e4ed;--rh-accent:#ae6e91}
+.rh-illustration{width:110px;height:110px;flex:none;border-radius:50%;background:#ffffffa6;border:3px solid #ffffffba;display:grid;place-items:center;position:relative;box-shadow:0 7px 18px #78566c13}
+.rh-panel:nth-child(n+3) .rh-illustration{width:100px;height:100px}
+.rh-illustration .rh-emoji{font-size:54px;line-height:1}
+.rh-illustration:after{content:'✦';position:absolute;top:-9px;right:-4px;font-size:24px;color:var(--rh-accent)}
+.rh-copy{min-width:0;position:relative;z-index:1}
+.rh-number{display:inline-block;background:var(--rh-accent);color:white;padding:5px 12px;border-radius:5px;font-size:10px;letter-spacing:.13em;font-weight:700;text-transform:uppercase}
+.rh-panel h3{font-family:'Playfair Display',serif;font-size:clamp(21px,2.5vw,27px);line-height:1.2;color:#463348;margin:11px 0 8px}
+.rh-panel p{font-size:13px;line-height:1.7;color:#594e5b;margin:0}
+.rh-gain{margin-top:12px;border-top:1px dashed #947d8e75;padding-top:11px;color:var(--rh-accent);font-size:12px;font-weight:700;line-height:1.6}
+.rh-gain span{display:block;color:#645967;font-weight:500;margin-top:3px}
+.rh-ribbon{display:flex;align-items:center;justify-content:center;gap:15px;margin:36px auto 0;max-width:850px;color:#8c6c89;text-align:center}
+.rh-ribbon:before,.rh-ribbon:after{content:'';height:1px;background:#d8bfd0;flex:1}
+.rh-ribbon span{font-family:'Playfair Display',serif;font-size:clamp(17px,2.2vw,25px);font-style:italic}
+.rh-caption{text-align:center;color:#a47e98;font-size:11px;letter-spacing:.2em;margin-top:11px}
+@media(max-width:950px){.rh-panel,.rh-panel:nth-child(1),.rh-panel:nth-child(2){grid-column:span 6;flex-direction:column;align-items:flex-start;min-height:0}.rh-panel:nth-child(n+3){min-height:0}.rh-banner{grid-template-columns:1fr auto}.rh-banner-art{min-height:100px}.rh-banner-art .rh-big-heart{font-size:85px}}
+@media(max-width:600px){.ruth-happiness{padding:38px 12px}.rh-poster{border-radius:20px}.rh-banner{padding:32px 22px;grid-template-columns:1fr}.rh-banner-art{display:none}.rh-banner p{font-size:13px}.rh-body{padding:23px 16px}.rh-intro{font-size:10px;letter-spacing:.15em}.rh-grid{grid-template-columns:1fr;gap:15px}.rh-panel,.rh-panel:nth-child(1),.rh-panel:nth-child(2){grid-column:1;display:grid;grid-template-columns:74px minmax(0,1fr);align-items:start;gap:14px;padding:17px;border-radius:20px;min-height:0}.rh-panel:nth-child(n+3){min-height:0}.rh-illustration,.rh-panel:nth-child(n+3) .rh-illustration{width:70px;height:70px}.rh-illustration .rh-emoji{font-size:35px}.rh-panel h3{font-size:21px;margin:8px 0}.rh-panel p{font-size:12px}.rh-gain{font-size:11px}.rh-number{font-size:9px}.rh-ribbon{margin-top:26px}.rh-caption{font-size:9px;letter-spacing:.08em}}
+@media(prefers-reduced-motion:reduce){.rh-panel{transition:none}}
+
+/* Fotografías personales integradas a la infografía editorial */
+.rh-panel{display:grid!important;grid-template-columns: minmax(0,1fr);align-content:start;gap:12px}
+.rh-panel:nth-child(1),.rh-panel:nth-child(2){grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}
+.rh-photo{margin:0;width:100%;min-width:0;height:205px;overflow:hidden;border-radius:20px 20px 58px 20px;border:4px solid #ffffffb8;box-shadow:0 8px 18px #503b531b;position:relative;z-index:1}
+.rh-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease}
+.rh-panel:hover .rh-photo img{transform:scale(1.045)}
+.rh-panel:nth-child(1) .rh-photo,.rh-panel:nth-child(2) .rh-photo{height:245px;grid-row:1 / span 2}
+.rh-panel:nth-child(1) .rh-illustration,.rh-panel:nth-child(2) .rh-illustration{display:none}
+.rh-panel:nth-child(n+3) .rh-illustration{position:absolute;top:193px;right:29px;width:55px;height:55px;z-index:3;border:3px solid white}
+.rh-panel:nth-child(n+3) .rh-illustration .rh-emoji{font-size:28px}
+.rh-panel:nth-child(n+3) .rh-illustration:after{font-size:14px}
+.rh-panel .rh-copy{align-self:center}
+.rh-panel:nth-child(3) .rh-photo img{object-position:center 46%}
+.rh-panel:nth-child(4) .rh-photo img{object-position:center 40%}
+.rh-panel:nth-child(5) .rh-photo img{object-position:center 50%}
+@media(max-width:950px){.rh-panel:nth-child(1),.rh-panel:nth-child(2){grid-template-columns:1fr}.rh-panel:nth-child(1) .rh-photo,.rh-panel:nth-child(2) .rh-photo{grid-row:auto;height:205px}.rh-panel:nth-child(n+3) .rh-illustration{top:193px}}
+@media(max-width:600px){.rh-panel,.rh-panel:nth-child(1),.rh-panel:nth-child(2){display:grid!important;grid-template-columns:minmax(0,1fr);padding:16px;gap:10px}.rh-photo,.rh-panel:nth-child(1) .rh-photo,.rh-panel:nth-child(2) .rh-photo{height:205px;border-radius:17px 17px 42px 17px}.rh-panel:nth-child(n+3) .rh-illustration{top:192px;right:25px;width:49px;height:49px}.rh-panel:nth-child(n+3) .rh-illustration .rh-emoji{font-size:25px}.rh-panel .rh-copy{padding:4px 2px 0}}
+@media(prefers-reduced-motion:reduce){.rh-photo img{transition:none}}
+
+/* AJUSTE FINAL: fotos completas, sin recortes ni ampliación */
+.rh-photo,
+.rh-panel:nth-child(1) .rh-photo,
+.rh-panel:nth-child(2) .rh-photo {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.55);
+  overflow: hidden;
+  border-radius: 22px;
+}
+.rh-photo img,
+.rh-panel:nth-child(3) .rh-photo img,
+.rh-panel:nth-child(4) .rh-photo img,
+.rh-panel:nth-child(5) .rh-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: none !important;
+}
+/* Foto horizontal de familia: se muestra entera en un marco horizontal */
+.rh-panel:nth-child(4) .rh-photo {aspect-ratio: 16 / 9;}
+/* Las fotos verticales tienen espacio suficiente para verse completas */
+.rh-panel:nth-child(1) .rh-photo,
+.rh-panel:nth-child(2) .rh-photo {aspect-ratio: 3 / 4;}
+.rh-panel:nth-child(3) .rh-photo,
+.rh-panel:nth-child(5) .rh-photo {aspect-ratio: 4 / 5;}
+/* El icono decorativo no tapa la fotografía */
+.rh-panel:nth-child(n+3) .rh-illustration {
+  position: relative;
+  top: auto;
+  right: auto;
+  width: 48px;
+  height: 48px;
+  margin-top: -32px;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: -5px;
+}
+@media (max-width: 950px) {
+  .rh-panel:nth-child(1) .rh-photo,
+  .rh-panel:nth-child(2) .rh-photo {height:auto;aspect-ratio:3/4;}
+}
+@media (max-width: 600px) {
+  .rh-photo,
+  .rh-panel:nth-child(1) .rh-photo,
+  .rh-panel:nth-child(2) .rh-photo {height:auto;min-height:0;}
+  .rh-panel:nth-child(n+3) .rh-illustration {
+    top:auto;right:auto;margin-top:-32px;
+    margin-left:auto;margin-right:10px;
+  }
+}
 </style>
 </head>
 
@@ -371,14 +456,19 @@
   </div>
 </section>
 
-<!-- INFOGRAFÍA HORIZONTAL PERSONALIZADA -->
+<!-- INFOGRAFÍA HORIZONTAL · ESTILO EDITORIAL -->
 <section class="ruth-happiness" id="mi-infografia" aria-labelledby="rh-title">
-<div class="rh-poster"><div class="rh-top"><span class="rh-eyebrow">Mis pasatiempos · Ruth Chavac</span><h2 id="rh-title">Lo que me hace <em>feliz</em></h2><p>Pequeños momentos que me permiten recargar energías, mantener el equilibrio y disfrutar de las cosas que realmente me hacen bien.</p><div class="rh-spark" aria-hidden="true">✿ ♡ ✦</div></div>
-<div class="rh-layout"><article class="rh-tile rh-green"><div class="rh-art" aria-hidden="true">🧘‍♀️</div><div class="rh-copy"><span class="rh-kicker">01 · Movimiento</span><h3>Hacer ejercicio</h3><p>Me gusta mantenerme activa, cuidar mi cuerpo y despejar la mente con actividad física.</p><div class="rh-benefits"><strong>✧ Me aporta</strong>Bienestar físico y mental · Energía · Constancia</div></div></article>
-<article class="rh-tile rh-lavender"><div class="rh-art" aria-hidden="true">🎬</div><div class="rh-copy"><span class="rh-kicker">02 · Historias</span><h3>Ir al cine</h3><p>Disfruto las películas, las nuevas historias y los momentos de diversión y desconexión.</p><div class="rh-benefits"><strong>✧ Me aporta</strong>Creatividad · Entretenimiento · Relajación</div></div></article>
-<article class="rh-tile rh-peach"><div class="rh-art" aria-hidden="true">☕</div><div class="rh-copy"><span class="rh-kicker">03 · Pequeños placeres</span><h3>Café y atardeceres</h3><p>Una taza de café y los colores del cielo me invitan a disfrutar la tranquilidad del presente.</p><div class="rh-benefits"><strong>✧ Me aporta</strong>Calma · Inspiración · Gratitud</div></div></article>
-<article class="rh-tile rh-blue"><div class="rh-art" aria-hidden="true">👨‍👩‍👧‍👦</div><div class="rh-copy"><span class="rh-kicker">04 · Amor y compañía</span><h3>Convivir con mi familia</h3><p>Compartir conversaciones, risas y recuerdos con las personas que más quiero es muy especial para mí.</p><div class="rh-benefits"><strong>✧ Me aporta</strong>Amor · Apoyo · Pertenencia</div></div></article>
-<article class="rh-tile rh-rose"><div class="rh-art" aria-hidden="true">🎧</div><div class="rh-copy"><span class="rh-kicker">05 · Mi refugio</span><h3>Escuchar música</h3><p>La música me acompaña, me inspira y me ayuda a conectar con mis emociones.</p><div class="rh-benefits"><strong>✧ Me aporta</strong>Armonía · Motivación · Bienestar</div></div></article></div><div class="rh-bottom">Mis pasatiempos, mi equilibrio ♡<span>PEQUEÑOS MOMENTOS, GRANDES FELICIDADES</span></div></div>
+<div class="rh-poster">
+<header class="rh-banner"><div><span class="rh-overline">MI MUNDO · MIS PASATIEMPOS</span><h2 id="rh-title">Lo que me hace <em>feliz</em></h2><p>Mis pasatiempos me ayudan a recargar energías, encontrar equilibrio y disfrutar los pequeños momentos que hacen especial cada día.</p></div><div class="rh-banner-art" aria-hidden="true"><span class="rh-big-heart">♡</span><span class="rh-spark">✿</span></div></header>
+<div class="rh-body"><div class="rh-intro">✦ CINCO FORMAS DE DISFRUTAR LA VIDA ✦</div>
+<div class="rh-grid">
+<article class="rh-panel rh-green"><figure class="rh-photo"><img src="ejercicio-ruth.png" alt="Fotografía haciendo ejercicio en el gimnasio" loading="lazy"></figure><div class="rh-illustration" aria-hidden="true"><span class="rh-emoji">🧘‍♀️</span></div><div class="rh-copy"><span class="rh-number">01 · Movimiento</span><h3>Hacer ejercicio</h3><p>Me gusta mantenerme activa, cuidar mi salud y liberar el estrés con actividad física.</p><div class="rh-gain">✧ Lo que me aporta<span>Energía · Constancia · Bienestar</span></div></div></article>
+<article class="rh-panel rh-violet"><figure class="rh-photo"><img src="cine-ruth.png" alt="Palomitas y bebidas en una sala de cine" loading="lazy"></figure><div class="rh-illustration" aria-hidden="true"><span class="rh-emoji">🎬</span></div><div class="rh-copy"><span class="rh-number">02 · Imaginación</span><h3>Ir al cine</h3><p>Disfruto descubrir historias, nuevas perspectivas y momentos de diversión en la pantalla.</p><div class="rh-gain">✧ Lo que me aporta<span>Creatividad · Entretenimiento · Relax</span></div></div></article>
+<article class="rh-panel rh-peach"><figure class="rh-photo"><img src="atardecer-ruth.png" alt="Atardecer rojo y rosado" loading="lazy"></figure><div class="rh-illustration" aria-hidden="true"><span class="rh-emoji">☕</span></div><div class="rh-copy"><span class="rh-number">03 · Tranquilidad</span><h3>Café y atardeceres</h3><p>Una taza de café y los colores del cielo me recuerdan la belleza de las cosas sencillas.</p><div class="rh-gain">✧ Lo que me aporta<span>Calma · Inspiración · Gratitud</span></div></div></article>
+<article class="rh-panel rh-blue"><figure class="rh-photo"><img src="familia-ruth.png" alt="Momento compartido con una persona querida" loading="lazy"></figure><div class="rh-illustration" aria-hidden="true"><span class="rh-emoji">👨‍👩‍👧‍👦</span></div><div class="rh-copy"><span class="rh-number">04 · Conexión</span><h3>Convivir con mi familia</h3><p>Compartir conversaciones, risas y recuerdos con quienes más quiero es muy especial para mí.</p><div class="rh-gain">✧ Lo que me aporta<span>Amor · Apoyo · Pertenencia</span></div></div></article>
+<article class="rh-panel rh-pink"><figure class="rh-photo"><img src="musica-ruth.png" alt="Audífonos y música en una computadora" loading="lazy"></figure><div class="rh-illustration" aria-hidden="true"><span class="rh-emoji">🎧</span></div><div class="rh-copy"><span class="rh-number">05 · Armonía</span><h3>Escuchar música</h3><p>La música me acompaña, me inspira y me ayuda a conectar con mis emociones.</p><div class="rh-gain">✧ Lo que me aporta<span>Motivación · Equilibrio · Paz</span></div></div></article>
+</div><div class="rh-ribbon"><span>Mis pasatiempos, mi equilibrio ♡</span></div><div class="rh-caption">PEQUEÑOS MOMENTOS · GRANDES FELICIDADES</div></div>
+</div>
 </section>
 
 <!-- PERFIL PROFESIONAL -->
